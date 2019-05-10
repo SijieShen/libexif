@@ -6,6 +6,21 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		648B1F302285274A001F1877 /* GSPro-LibExifFAT */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 648B1F332285274A001F1877 /* Build configuration list for PBXAggregateTarget "GSPro-LibExifFAT" */;
+			buildPhases = (
+				648B1F3622852777001F1877 /* ShellScript */,
+			);
+			dependencies = (
+				648B1F3522852756001F1877 /* PBXTargetDependency */,
+			);
+			name = "GSPro-LibExifFAT";
+			productName = "GSPro-LibExifFAT";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		648B1EF722851956001F1877 /* mnote-olympus-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1E9822851956001F1877 /* mnote-olympus-entry.c */; };
 		648B1EF822851956001F1877 /* exif-mnote-data-olympus.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1E9E22851956001F1877 /* exif-mnote-data-olympus.c */; };
@@ -44,6 +59,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		648B1F2C22851C8F001F1877 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 648B1E23228517A4001F1877 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 648B1E2A228517A4001F1877;
+			remoteInfo = LibExif;
+		};
+		648B1F3422852756001F1877 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 648B1E23228517A4001F1877 /* Project object */;
 			proxyType = 1;
@@ -370,6 +392,9 @@
 					648B1F1322851B75001F1877 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					648B1F302285274A001F1877 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 648B1E26228517A4001F1877 /* Build configuration list for PBXProject "LibExif" */;
@@ -387,6 +412,7 @@
 			targets = (
 				648B1E2A228517A4001F1877 /* LibExif */,
 				648B1F1322851B75001F1877 /* TestiOS-libexif */,
+				648B1F302285274A001F1877 /* GSPro-LibExifFAT */,
 			);
 		};
 /* End PBXProject section */
@@ -404,6 +430,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		648B1F3622852777001F1877 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\n\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\nRW_WORKSPACE_LOCATION=\"${SRCROOT}/LibExif.xcodeproj\"\nRW_LIBRARY_NAME=\"libLibExif\"\nRW_FRAMEWORK_NAME=\"GSPro-libexif\"\nRW_INPUT_STATIC_LIB=\"${RW_LIBRARY_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/../${CONFIGURATION}-Universal/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n# Will rebuild the static library as specified\n#     build_static_library sdk\nxcrun xcodebuild -project \"${RW_WORKSPACE_LOCATION}\" \\\n-configuration \"${CONFIGURATION}\" \\\n-sdk \"${1}\" \\\n-scheme \"${TARGET_NAME}\" \\\nONLY_ACTIVE_ARCH=NO \\\nBUILD_DIR=\"${BUILD_DIR}\" \\\nOBJROOT=\"${OBJROOT}/DependantBuilds\" \\\nBUILD_ROOT=\"${BUILD_ROOT}\" \\\nSYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n# Will smash 2 static libs together\n#     make_fat_library in1 in2 out\nxcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\necho \"input_1 : ${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\necho \"input_2 : ${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\necho \"output : ${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\nmkdir -p \"${RW_FRAMEWORK_LOCATION}/Versions/A/Headers\"\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Create the required symlinks\ncd \"${RW_FRAMEWORK_LOCATION}\"\n/bin/ln -sfh A \"${RW_FRAMEWORK_LOCATION}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${RW_FRAMEWORK_LOCATION}/Headers\"\n/bin/ln -sfh \"Versions/Current/${RW_FRAMEWORK_NAME}\" \"${RW_FRAMEWORK_LOCATION}/${RW_FRAMEWORK_NAME}\"\n\n# Copy the public headers into the framework\ncd \"${SRCROOT}/../../../libexif\"\nditto *.h \"${RW_FRAMEWORK_LOCATION}/Versions/A/Headers\"\nrsync -R */*.h \"${RW_FRAMEWORK_LOCATION}/Versions/A/Headers\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		648B1E27228517A4001F1877 /* Sources */ = {
@@ -455,6 +501,11 @@
 			isa = PBXTargetDependency;
 			target = 648B1E2A228517A4001F1877 /* LibExif */;
 			targetProxy = 648B1F2C22851C8F001F1877 /* PBXContainerItemProxy */;
+		};
+		648B1F3522852756001F1877 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 648B1E2A228517A4001F1877 /* LibExif */;
+			targetProxy = 648B1F3422852756001F1877 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -654,6 +705,24 @@
 			};
 			name = Release;
 		};
+		648B1F312285274A001F1877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		648B1F322285274A001F1877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -680,6 +749,15 @@
 			buildConfigurations = (
 				648B1F2822851B76001F1877 /* Debug */,
 				648B1F2922851B76001F1877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		648B1F332285274A001F1877 /* Build configuration list for PBXAggregateTarget "GSPro-LibExifFAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648B1F312285274A001F1877 /* Debug */,
+				648B1F322285274A001F1877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
