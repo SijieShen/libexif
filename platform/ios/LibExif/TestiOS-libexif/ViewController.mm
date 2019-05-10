@@ -35,13 +35,7 @@ static void show_tag(ExifData *d, ExifIfd ifd, ExifTag tag)
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    NSString * imagePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"jpg"];
-    std::string imgStr = std::string([imagePath UTF8String]);
-    
+void show_exif(std::string imgStr){
     ExifData *ed;
     /* Get a pointer to the EXIF data */
     ed = exif_data_new_from_file(imgStr.c_str());
@@ -62,6 +56,19 @@ static void show_tag(ExifData *d, ExifIfd ifd, ExifTag tag)
         /* Free the EXIF data */
         exif_data_unref(ed);
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    NSString * imagePath_jpg = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"jpg"];
+    std::string imgStr_jpg = std::string([imagePath_jpg UTF8String]);
+    show_exif(imgStr_jpg);
+    
+    NSString * imagePath_tif = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"tif"];
+    std::string imgStr_tif = std::string([imagePath_tif UTF8String]);
+    show_exif(imgStr_tif);
 }
 
 

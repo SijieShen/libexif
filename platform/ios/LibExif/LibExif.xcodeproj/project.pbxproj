@@ -55,6 +55,7 @@
 		648B1F2622851B76001F1877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B1F2522851B76001F1877 /* main.m */; };
 		648B1F2B22851C39001F1877 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F2A22851C39001F1877 /* test.jpg */; };
 		648B1F2F22851C9E001F1877 /* libLibExif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648B1E2B228517A4001F1877 /* libLibExif.a */; };
+		648B1F3822853A42001F1877 /* test.tif in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F3722853A42001F1877 /* test.tif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		648B1F2422851B76001F1877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648B1F2522851B76001F1877 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		648B1F2A22851C39001F1877 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		648B1F3722853A42001F1877 /* test.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = test.tif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		648B1F1522851B75001F1877 /* TestiOS-libexif */ = {
 			isa = PBXGroup;
 			children = (
+				648B1F3722853A42001F1877 /* test.tif */,
 				648B1F2A22851C39001F1877 /* test.jpg */,
 				648B1F1622851B75001F1877 /* AppDelegate.h */,
 				648B1F1722851B75001F1877 /* AppDelegate.m */,
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				648B1F2322851B76001F1877 /* LaunchScreen.storyboard in Resources */,
+				648B1F3822853A42001F1877 /* test.tif in Resources */,
 				648B1F2022851B76001F1877 /* Assets.xcassets in Resources */,
 				648B1F1E22851B75001F1877 /* Main.storyboard in Resources */,
 				648B1F2B22851C39001F1877 /* test.jpg in Resources */,
