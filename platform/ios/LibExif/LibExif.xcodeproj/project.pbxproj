@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		648B1EF722851956001F1877 /* mnote-olympus-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1E9822851956001F1877 /* mnote-olympus-entry.c */; };
+		648B1EF822851956001F1877 /* exif-mnote-data-olympus.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1E9E22851956001F1877 /* exif-mnote-data-olympus.c */; };
+		648B1EF922851956001F1877 /* mnote-olympus-tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1E9F22851956001F1877 /* mnote-olympus-tag.c */; };
+		648B1EFA22851956001F1877 /* exif-mnote-data-fuji.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EA222851956001F1877 /* exif-mnote-data-fuji.c */; };
+		648B1EFB22851956001F1877 /* mnote-fuji-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EA322851956001F1877 /* mnote-fuji-entry.c */; };
+		648B1EFC22851956001F1877 /* mnote-fuji-tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EA422851956001F1877 /* mnote-fuji-tag.c */; };
+		648B1EFD22851956001F1877 /* exif-log.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EA922851956001F1877 /* exif-log.c */; };
+		648B1EFE22851956001F1877 /* exif-utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EAC22851956001F1877 /* exif-utils.c */; };
+		648B1EFF22851956001F1877 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EB222851956001F1877 /* Makefile */; };
+		648B1F0022851956001F1877 /* exif-mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EB322851956001F1877 /* exif-mem.c */; };
+		648B1F0122851956001F1877 /* exif-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EB622851956001F1877 /* exif-entry.c */; };
+		648B1F0222851956001F1877 /* mnote-canon-tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EBD22851956001F1877 /* mnote-canon-tag.c */; };
+		648B1F0322851956001F1877 /* mnote-canon-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EBE22851956001F1877 /* mnote-canon-entry.c */; };
+		648B1F0422851956001F1877 /* exif-mnote-data-canon.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EC022851956001F1877 /* exif-mnote-data-canon.c */; };
+		648B1F0522851956001F1877 /* exif-format.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EC622851956001F1877 /* exif-format.c */; };
+		648B1F0622851956001F1877 /* exif-byte-order.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ECA22851956001F1877 /* exif-byte-order.c */; };
+		648B1F0722851956001F1877 /* exif-content.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ECB22851956001F1877 /* exif-content.c */; };
+		648B1F0822851956001F1877 /* exif-tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ECC22851956001F1877 /* exif-tag.c */; };
+		648B1F0922851956001F1877 /* exif-loader.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ECD22851956001F1877 /* exif-loader.c */; };
+		648B1F0A22851956001F1877 /* exif-mnote-data.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ECF22851956001F1877 /* exif-mnote-data.c */; };
+		648B1F0B22851956001F1877 /* exif-ifd.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1ED022851956001F1877 /* exif-ifd.c */; };
+		648B1F0C22851956001F1877 /* exif-data.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EEA22851956001F1877 /* exif-data.c */; };
+		648B1F0D22851956001F1877 /* mnote-pentax-entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EEE22851956001F1877 /* mnote-pentax-entry.c */; };
+		648B1F0E22851956001F1877 /* exif-mnote-data-pentax.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EEF22851956001F1877 /* exif-mnote-data-pentax.c */; };
+		648B1F0F22851956001F1877 /* mnote-pentax-tag.c in Sources */ = {isa = PBXBuildFile; fileRef = 648B1EF522851956001F1877 /* mnote-pentax-tag.c */; };
+		648B1F1822851B75001F1877 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B1F1722851B75001F1877 /* AppDelegate.m */; };
+		648B1F1B22851B75001F1877 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 648B1F1A22851B75001F1877 /* ViewController.mm */; };
+		648B1F1E22851B75001F1877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F1C22851B75001F1877 /* Main.storyboard */; };
+		648B1F2022851B76001F1877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F1F22851B76001F1877 /* Assets.xcassets */; };
+		648B1F2322851B76001F1877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F2122851B76001F1877 /* LaunchScreen.storyboard */; };
+		648B1F2622851B76001F1877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B1F2522851B76001F1877 /* main.m */; };
+		648B1F2B22851C39001F1877 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 648B1F2A22851C39001F1877 /* test.jpg */; };
+		648B1F2F22851C9E001F1877 /* libLibExif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648B1E2B228517A4001F1877 /* libLibExif.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		648B1F2C22851C8F001F1877 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 648B1E23228517A4001F1877 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 648B1E2A228517A4001F1877;
+			remoteInfo = LibExif;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		648B1E29228517A4001F1877 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		648B1E2B228517A4001F1877 /* libLibExif.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibExif.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		648B1E95228518B2001F1877 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../config.h; sourceTree = "<group>"; };
+		648B1E9822851956001F1877 /* mnote-olympus-entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-olympus-entry.c"; sourceTree = "<group>"; };
+		648B1E9922851956001F1877 /* exif-mnote-data-olympus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data-olympus.h"; sourceTree = "<group>"; };
+		648B1E9A22851956001F1877 /* mnote-olympus-tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-olympus-tag.h"; sourceTree = "<group>"; };
+		648B1E9B22851956001F1877 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		648B1E9C22851956001F1877 /* mnote-olympus-entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-olympus-entry.h"; sourceTree = "<group>"; };
+		648B1E9D22851956001F1877 /* Makefile-files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Makefile-files"; sourceTree = "<group>"; };
+		648B1E9E22851956001F1877 /* exif-mnote-data-olympus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mnote-data-olympus.c"; sourceTree = "<group>"; };
+		648B1E9F22851956001F1877 /* mnote-olympus-tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-olympus-tag.c"; sourceTree = "<group>"; };
+		648B1EA122851956001F1877 /* mnote-fuji-tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-fuji-tag.h"; sourceTree = "<group>"; };
+		648B1EA222851956001F1877 /* exif-mnote-data-fuji.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mnote-data-fuji.c"; sourceTree = "<group>"; };
+		648B1EA322851956001F1877 /* mnote-fuji-entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-fuji-entry.c"; sourceTree = "<group>"; };
+		648B1EA422851956001F1877 /* mnote-fuji-tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-fuji-tag.c"; sourceTree = "<group>"; };
+		648B1EA522851956001F1877 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		648B1EA622851956001F1877 /* Makefile-files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Makefile-files"; sourceTree = "<group>"; };
+		648B1EA722851956001F1877 /* mnote-fuji-entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-fuji-entry.h"; sourceTree = "<group>"; };
+		648B1EA822851956001F1877 /* exif-mnote-data-fuji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data-fuji.h"; sourceTree = "<group>"; };
+		648B1EA922851956001F1877 /* exif-log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-log.c"; sourceTree = "<group>"; };
+		648B1EAA22851956001F1877 /* exif-system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-system.h"; sourceTree = "<group>"; };
+		648B1EAB22851956001F1877 /* exif-format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-format.h"; sourceTree = "<group>"; };
+		648B1EAC22851956001F1877 /* exif-utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-utils.c"; sourceTree = "<group>"; };
+		648B1EAD22851956001F1877 /* exif-tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-tag.h"; sourceTree = "<group>"; };
+		648B1EAE22851956001F1877 /* exif-data-type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-data-type.h"; sourceTree = "<group>"; };
+		648B1EAF22851956001F1877 /* exif-content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-content.h"; sourceTree = "<group>"; };
+		648B1EB022851956001F1877 /* exif-byte-order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-byte-order.h"; sourceTree = "<group>"; };
+		648B1EB122851956001F1877 /* exif-ifd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-ifd.h"; sourceTree = "<group>"; };
+		648B1EB222851956001F1877 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		648B1EB322851956001F1877 /* exif-mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mem.c"; sourceTree = "<group>"; };
+		648B1EB422851956001F1877 /* exif-mnote-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data.h"; sourceTree = "<group>"; };
+		648B1EB522851956001F1877 /* exif-loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-loader.h"; sourceTree = "<group>"; };
+		648B1EB622851956001F1877 /* exif-entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-entry.c"; sourceTree = "<group>"; };
+		648B1EB722851956001F1877 /* i18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i18n.h; sourceTree = "<group>"; };
+		648B1EB822851956001F1877 /* exif-data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-data.h"; sourceTree = "<group>"; };
+		648B1EBA22851956001F1877 /* mnote-canon-entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-canon-entry.h"; sourceTree = "<group>"; };
+		648B1EBB22851956001F1877 /* mnote-canon-tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-canon-tag.h"; sourceTree = "<group>"; };
+		648B1EBC22851956001F1877 /* exif-mnote-data-canon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data-canon.h"; sourceTree = "<group>"; };
+		648B1EBD22851956001F1877 /* mnote-canon-tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-canon-tag.c"; sourceTree = "<group>"; };
+		648B1EBE22851956001F1877 /* mnote-canon-entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-canon-entry.c"; sourceTree = "<group>"; };
+		648B1EBF22851956001F1877 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		648B1EC022851956001F1877 /* exif-mnote-data-canon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mnote-data-canon.c"; sourceTree = "<group>"; };
+		648B1EC122851956001F1877 /* Makefile-files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Makefile-files"; sourceTree = "<group>"; };
+		648B1EC222851956001F1877 /* exif-utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-utils.h"; sourceTree = "<group>"; };
+		648B1EC322851956001F1877 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		648B1EC422851956001F1877 /* libexif.sym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libexif.sym; sourceTree = "<group>"; };
+		648B1EC522851956001F1877 /* _stdint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _stdint.h; sourceTree = "<group>"; };
+		648B1EC622851956001F1877 /* exif-format.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-format.c"; sourceTree = "<group>"; };
+		648B1EC722851956001F1877 /* exif-mnote-data-priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data-priv.h"; sourceTree = "<group>"; };
+		648B1EC822851956001F1877 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		648B1EC922851956001F1877 /* exif-log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-log.h"; sourceTree = "<group>"; };
+		648B1ECA22851956001F1877 /* exif-byte-order.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-byte-order.c"; sourceTree = "<group>"; };
+		648B1ECB22851956001F1877 /* exif-content.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-content.c"; sourceTree = "<group>"; };
+		648B1ECC22851956001F1877 /* exif-tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-tag.c"; sourceTree = "<group>"; };
+		648B1ECD22851956001F1877 /* exif-loader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-loader.c"; sourceTree = "<group>"; };
+		648B1ECE22851956001F1877 /* exif-mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mem.h"; sourceTree = "<group>"; };
+		648B1ECF22851956001F1877 /* exif-mnote-data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mnote-data.c"; sourceTree = "<group>"; };
+		648B1ED022851956001F1877 /* exif-ifd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-ifd.c"; sourceTree = "<group>"; };
+		648B1EEA22851956001F1877 /* exif-data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-data.c"; sourceTree = "<group>"; };
+		648B1EEB22851956001F1877 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		648B1EEC22851956001F1877 /* exif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exif.h; sourceTree = "<group>"; };
+		648B1EEE22851956001F1877 /* mnote-pentax-entry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-pentax-entry.c"; sourceTree = "<group>"; };
+		648B1EEF22851956001F1877 /* exif-mnote-data-pentax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "exif-mnote-data-pentax.c"; sourceTree = "<group>"; };
+		648B1EF022851956001F1877 /* mnote-pentax-tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-pentax-tag.h"; sourceTree = "<group>"; };
+		648B1EF122851956001F1877 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		648B1EF222851956001F1877 /* mnote-pentax-entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mnote-pentax-entry.h"; sourceTree = "<group>"; };
+		648B1EF322851956001F1877 /* Makefile-files */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Makefile-files"; sourceTree = "<group>"; };
+		648B1EF422851956001F1877 /* exif-mnote-data-pentax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-mnote-data-pentax.h"; sourceTree = "<group>"; };
+		648B1EF522851956001F1877 /* mnote-pentax-tag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mnote-pentax-tag.c"; sourceTree = "<group>"; };
+		648B1EF622851956001F1877 /* exif-entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exif-entry.h"; sourceTree = "<group>"; };
+		648B1F1422851B75001F1877 /* TestiOS-libexif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestiOS-libexif.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		648B1F1622851B75001F1877 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		648B1F1722851B75001F1877 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		648B1F1922851B75001F1877 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		648B1F1A22851B75001F1877 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		648B1F1D22851B75001F1877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		648B1F1F22851B76001F1877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		648B1F2222851B76001F1877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		648B1F2422851B76001F1877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648B1F2522851B76001F1877 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		648B1F2A22851C39001F1877 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		648B1E28228517A4001F1877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		648B1F1122851B75001F1877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648B1F2F22851C9E001F1877 /* libLibExif.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		648B1E22228517A4001F1877 = {
+			isa = PBXGroup;
+			children = (
+				648B1E95228518B2001F1877 /* config.h */,
+				648B1E9622851956001F1877 /* libexif */,
+				648B1F1522851B75001F1877 /* TestiOS-libexif */,
+				648B1E2C228517A4001F1877 /* Products */,
+				648B1F2E22851C9E001F1877 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		648B1E2C228517A4001F1877 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				648B1E2B228517A4001F1877 /* libLibExif.a */,
+				648B1F1422851B75001F1877 /* TestiOS-libexif.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		648B1E9622851956001F1877 /* libexif */ = {
+			isa = PBXGroup;
+			children = (
+				648B1E9722851956001F1877 /* olympus */,
+				648B1EA022851956001F1877 /* fuji */,
+				648B1EA922851956001F1877 /* exif-log.c */,
+				648B1EAA22851956001F1877 /* exif-system.h */,
+				648B1EAB22851956001F1877 /* exif-format.h */,
+				648B1EAC22851956001F1877 /* exif-utils.c */,
+				648B1EAD22851956001F1877 /* exif-tag.h */,
+				648B1EAE22851956001F1877 /* exif-data-type.h */,
+				648B1EAF22851956001F1877 /* exif-content.h */,
+				648B1EB022851956001F1877 /* exif-byte-order.h */,
+				648B1EB122851956001F1877 /* exif-ifd.h */,
+				648B1EB222851956001F1877 /* Makefile */,
+				648B1EB322851956001F1877 /* exif-mem.c */,
+				648B1EB422851956001F1877 /* exif-mnote-data.h */,
+				648B1EB522851956001F1877 /* exif-loader.h */,
+				648B1EB622851956001F1877 /* exif-entry.c */,
+				648B1EB722851956001F1877 /* i18n.h */,
+				648B1EB822851956001F1877 /* exif-data.h */,
+				648B1EB922851956001F1877 /* canon */,
+				648B1EC222851956001F1877 /* exif-utils.h */,
+				648B1EC322851956001F1877 /* Makefile.am */,
+				648B1EC422851956001F1877 /* libexif.sym */,
+				648B1EC522851956001F1877 /* _stdint.h */,
+				648B1EC622851956001F1877 /* exif-format.c */,
+				648B1EC722851956001F1877 /* exif-mnote-data-priv.h */,
+				648B1EC822851956001F1877 /* .gitignore */,
+				648B1EC922851956001F1877 /* exif-log.h */,
+				648B1ECA22851956001F1877 /* exif-byte-order.c */,
+				648B1ECB22851956001F1877 /* exif-content.c */,
+				648B1ECC22851956001F1877 /* exif-tag.c */,
+				648B1ECD22851956001F1877 /* exif-loader.c */,
+				648B1ECE22851956001F1877 /* exif-mem.h */,
+				648B1ECF22851956001F1877 /* exif-mnote-data.c */,
+				648B1ED022851956001F1877 /* exif-ifd.c */,
+				648B1EEA22851956001F1877 /* exif-data.c */,
+				648B1EEB22851956001F1877 /* Makefile.in */,
+				648B1EEC22851956001F1877 /* exif.h */,
+				648B1EED22851956001F1877 /* pentax */,
+				648B1EF622851956001F1877 /* exif-entry.h */,
+			);
+			name = libexif;
+			path = ../../../libexif;
+			sourceTree = "<group>";
+		};
+		648B1E9722851956001F1877 /* olympus */ = {
+			isa = PBXGroup;
+			children = (
+				648B1E9822851956001F1877 /* mnote-olympus-entry.c */,
+				648B1E9922851956001F1877 /* exif-mnote-data-olympus.h */,
+				648B1E9A22851956001F1877 /* mnote-olympus-tag.h */,
+				648B1E9B22851956001F1877 /* .gitignore */,
+				648B1E9C22851956001F1877 /* mnote-olympus-entry.h */,
+				648B1E9D22851956001F1877 /* Makefile-files */,
+				648B1E9E22851956001F1877 /* exif-mnote-data-olympus.c */,
+				648B1E9F22851956001F1877 /* mnote-olympus-tag.c */,
+			);
+			path = olympus;
+			sourceTree = "<group>";
+		};
+		648B1EA022851956001F1877 /* fuji */ = {
+			isa = PBXGroup;
+			children = (
+				648B1EA122851956001F1877 /* mnote-fuji-tag.h */,
+				648B1EA222851956001F1877 /* exif-mnote-data-fuji.c */,
+				648B1EA322851956001F1877 /* mnote-fuji-entry.c */,
+				648B1EA422851956001F1877 /* mnote-fuji-tag.c */,
+				648B1EA522851956001F1877 /* .gitignore */,
+				648B1EA622851956001F1877 /* Makefile-files */,
+				648B1EA722851956001F1877 /* mnote-fuji-entry.h */,
+				648B1EA822851956001F1877 /* exif-mnote-data-fuji.h */,
+			);
+			path = fuji;
+			sourceTree = "<group>";
+		};
+		648B1EB922851956001F1877 /* canon */ = {
+			isa = PBXGroup;
+			children = (
+				648B1EBA22851956001F1877 /* mnote-canon-entry.h */,
+				648B1EBB22851956001F1877 /* mnote-canon-tag.h */,
+				648B1EBC22851956001F1877 /* exif-mnote-data-canon.h */,
+				648B1EBD22851956001F1877 /* mnote-canon-tag.c */,
+				648B1EBE22851956001F1877 /* mnote-canon-entry.c */,
+				648B1EBF22851956001F1877 /* .gitignore */,
+				648B1EC022851956001F1877 /* exif-mnote-data-canon.c */,
+				648B1EC122851956001F1877 /* Makefile-files */,
+			);
+			path = canon;
+			sourceTree = "<group>";
+		};
+		648B1EED22851956001F1877 /* pentax */ = {
+			isa = PBXGroup;
+			children = (
+				648B1EEE22851956001F1877 /* mnote-pentax-entry.c */,
+				648B1EEF22851956001F1877 /* exif-mnote-data-pentax.c */,
+				648B1EF022851956001F1877 /* mnote-pentax-tag.h */,
+				648B1EF122851956001F1877 /* .gitignore */,
+				648B1EF222851956001F1877 /* mnote-pentax-entry.h */,
+				648B1EF322851956001F1877 /* Makefile-files */,
+				648B1EF422851956001F1877 /* exif-mnote-data-pentax.h */,
+				648B1EF522851956001F1877 /* mnote-pentax-tag.c */,
+			);
+			path = pentax;
+			sourceTree = "<group>";
+		};
+		648B1F1522851B75001F1877 /* TestiOS-libexif */ = {
+			isa = PBXGroup;
+			children = (
+				648B1F2A22851C39001F1877 /* test.jpg */,
+				648B1F1622851B75001F1877 /* AppDelegate.h */,
+				648B1F1722851B75001F1877 /* AppDelegate.m */,
+				648B1F1922851B75001F1877 /* ViewController.h */,
+				648B1F1A22851B75001F1877 /* ViewController.mm */,
+				648B1F1C22851B75001F1877 /* Main.storyboard */,
+				648B1F1F22851B76001F1877 /* Assets.xcassets */,
+				648B1F2122851B76001F1877 /* LaunchScreen.storyboard */,
+				648B1F2422851B76001F1877 /* Info.plist */,
+				648B1F2522851B76001F1877 /* main.m */,
+			);
+			path = "TestiOS-libexif";
+			sourceTree = "<group>";
+		};
+		648B1F2E22851C9E001F1877 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		648B1E2A228517A4001F1877 /* LibExif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 648B1E34228517A4001F1877 /* Build configuration list for PBXNativeTarget "LibExif" */;
+			buildPhases = (
+				648B1E27228517A4001F1877 /* Sources */,
+				648B1E28228517A4001F1877 /* Frameworks */,
+				648B1E29228517A4001F1877 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibExif;
+			productName = LibExif;
+			productReference = 648B1E2B228517A4001F1877 /* libLibExif.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		648B1F1322851B75001F1877 /* TestiOS-libexif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 648B1F2722851B76001F1877 /* Build configuration list for PBXNativeTarget "TestiOS-libexif" */;
+			buildPhases = (
+				648B1F1022851B75001F1877 /* Sources */,
+				648B1F1122851B75001F1877 /* Frameworks */,
+				648B1F1222851B75001F1877 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				648B1F2D22851C8F001F1877 /* PBXTargetDependency */,
+			);
+			name = "TestiOS-libexif";
+			productName = "TestiOS-libexif";
+			productReference = 648B1F1422851B75001F1877 /* TestiOS-libexif.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		648B1E23228517A4001F1877 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "djij-solution";
+				TargetAttributes = {
+					648B1E2A228517A4001F1877 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					648B1F1322851B75001F1877 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 648B1E26228517A4001F1877 /* Build configuration list for PBXProject "LibExif" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 648B1E22228517A4001F1877;
+			productRefGroup = 648B1E2C228517A4001F1877 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				648B1E2A228517A4001F1877 /* LibExif */,
+				648B1F1322851B75001F1877 /* TestiOS-libexif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		648B1F1222851B75001F1877 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648B1F2322851B76001F1877 /* LaunchScreen.storyboard in Resources */,
+				648B1F2022851B76001F1877 /* Assets.xcassets in Resources */,
+				648B1F1E22851B75001F1877 /* Main.storyboard in Resources */,
+				648B1F2B22851C39001F1877 /* test.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		648B1E27228517A4001F1877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648B1EFF22851956001F1877 /* Makefile in Sources */,
+				648B1F0A22851956001F1877 /* exif-mnote-data.c in Sources */,
+				648B1EFC22851956001F1877 /* mnote-fuji-tag.c in Sources */,
+				648B1EF722851956001F1877 /* mnote-olympus-entry.c in Sources */,
+				648B1F0F22851956001F1877 /* mnote-pentax-tag.c in Sources */,
+				648B1EFA22851956001F1877 /* exif-mnote-data-fuji.c in Sources */,
+				648B1F0C22851956001F1877 /* exif-data.c in Sources */,
+				648B1EFB22851956001F1877 /* mnote-fuji-entry.c in Sources */,
+				648B1F0922851956001F1877 /* exif-loader.c in Sources */,
+				648B1EF922851956001F1877 /* mnote-olympus-tag.c in Sources */,
+				648B1F0822851956001F1877 /* exif-tag.c in Sources */,
+				648B1F0722851956001F1877 /* exif-content.c in Sources */,
+				648B1F0222851956001F1877 /* mnote-canon-tag.c in Sources */,
+				648B1EFD22851956001F1877 /* exif-log.c in Sources */,
+				648B1F0D22851956001F1877 /* mnote-pentax-entry.c in Sources */,
+				648B1F0622851956001F1877 /* exif-byte-order.c in Sources */,
+				648B1F0B22851956001F1877 /* exif-ifd.c in Sources */,
+				648B1F0522851956001F1877 /* exif-format.c in Sources */,
+				648B1F0E22851956001F1877 /* exif-mnote-data-pentax.c in Sources */,
+				648B1F0022851956001F1877 /* exif-mem.c in Sources */,
+				648B1EF822851956001F1877 /* exif-mnote-data-olympus.c in Sources */,
+				648B1F0322851956001F1877 /* mnote-canon-entry.c in Sources */,
+				648B1F0122851956001F1877 /* exif-entry.c in Sources */,
+				648B1EFE22851956001F1877 /* exif-utils.c in Sources */,
+				648B1F0422851956001F1877 /* exif-mnote-data-canon.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		648B1F1022851B75001F1877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648B1F1B22851B75001F1877 /* ViewController.mm in Sources */,
+				648B1F2622851B76001F1877 /* main.m in Sources */,
+				648B1F1822851B75001F1877 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		648B1F2D22851C8F001F1877 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 648B1E2A228517A4001F1877 /* LibExif */;
+			targetProxy = 648B1F2C22851C8F001F1877 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		648B1F1C22851B75001F1877 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				648B1F1D22851B75001F1877 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		648B1F2122851B76001F1877 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				648B1F2222851B76001F1877 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		648B1E32228517A4001F1877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		648B1E33228517A4001F1877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		648B1E35228517A4001F1877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../..\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		648B1E36228517A4001F1877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../..\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		648B1F2822851B76001F1877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../..\"";
+				INFOPLIST_FILE = "TestiOS-libexif/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dji.gspro.TestiOS-libexif";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		648B1F2922851B76001F1877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAU86MSXBP;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../..\"";
+				INFOPLIST_FILE = "TestiOS-libexif/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dji.gspro.TestiOS-libexif";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		648B1E26228517A4001F1877 /* Build configuration list for PBXProject "LibExif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648B1E32228517A4001F1877 /* Debug */,
+				648B1E33228517A4001F1877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		648B1E34228517A4001F1877 /* Build configuration list for PBXNativeTarget "LibExif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648B1E35228517A4001F1877 /* Debug */,
+				648B1E36228517A4001F1877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		648B1F2722851B76001F1877 /* Build configuration list for PBXNativeTarget "TestiOS-libexif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648B1F2822851B76001F1877 /* Debug */,
+				648B1F2922851B76001F1877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 648B1E23228517A4001F1877 /* Project object */;
+}
