@@ -61,3 +61,6 @@ conftest.c
 ABOUT-NLS
 ChangeLog.cvs
 cvs2cl.usermap
+
+
+.DS_Store
